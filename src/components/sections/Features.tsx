@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 export function Features() {
-  return <section className="flex min-h-[963px] w-full flex-col overflow-hidden text-white px-16 py-[130px] bg-black max-md:px-5 max-md:py-[100px]" aria-label="Features">
+  return <section aria-label="Features" className="flex min-h-[963px] w-full flex-col overflow-hidden text-white px-16 bg-black max-md:px-5 py-[10px]">
       <div className="flex w-[768px] max-w-full flex-col">
         <span className="text-base font-semibold">Tagline</span>
         <div className="w-full mt-4">
@@ -22,7 +22,7 @@ export function Features() {
             <h3 className="text-[32px] font-bold leading-[42px] mt-6">
               AI Therapy: The Future of Mental Health Support
             </h3>
-            <p className="text-base font-normal leading-6 mt-6">
+            <p className="text-base font-normal leading-6 mt-6 text-center">
               To provide mental health support, offering accessible, data-driven
               solutions for emotional well-being.
             </p>
@@ -33,7 +33,7 @@ export function Features() {
             <h3 className="text-[32px] font-bold leading-[42px] mt-6">
               AI Chatbots for Emotional Support
             </h3>
-            <p className="text-base font-normal leading-6 mt-6">
+            <p className="text-base font-normal leading-6 mt-6 text-center">
               AI-driven chatbots provide real-time conversations, helping users
               process emotions, manage stress, and improve mental well-being
             </p>
@@ -44,7 +44,7 @@ export function Features() {
             <h3 className="text-[32px] font-bold leading-[1.3] mt-6">
               24/7 Instant Support
             </h3>
-            <p className="text-base font-normal leading-6 mt-6">
+            <p className="text-base font-normal leading-6 mt-6 text-center">
               Available anytime, anywhere, eliminating wait times for
               traditional therapy.
               <br />

@@ -9,9 +9,9 @@ export function Hero() {
       });
     }
   };
-  return <section className="min-h-[900px] w-full overflow-hidden bg-black" aria-label="Hero section">
+  return <section aria-label="Hero section" className="min-h-[700px] w-full overflow-hidden bg-black">
       <div className="flex w-full items-stretch flex-1 flex-wrap h-full">
-        <div className="flex min-w-60 flex-col items-stretch justify-center flex-1 shrink basis-[0%] pl-16 pr-20 max-md:px-5">
+        <div className="flex min-w-60 flex-col items-stretch justify-center flex-1 shrink basis-[0%] pl-16 pr-20 max-md:px-5 rounded-2xl bg-[#00ee00]/0">
           <div className="w-full text-white">
             <h1 className="font-bold leading-[67px] max-md:leading-[54px] text-4xl">Click on the chat ion to chat with "AI bot"</h1>
             <p className="text-lg font-normal leading-[27px] mt-6">
