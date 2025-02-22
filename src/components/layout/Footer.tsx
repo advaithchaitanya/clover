@@ -202,39 +202,40 @@ export function Footer() {
                 Cookie Settings
               </a>
             </div>
+            
             <div className="flex gap-3">
-              {/* Social Icons */}
-              <a href="#" aria-label="Facebook">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/db58949b72125426f4751d95c3322c3b4e0b1e31ae5e935131a06a27e13040b3"
-                  alt=""
-                  className="w-6 h-6"
-                />
-              </a>
-              <a href="#" aria-label="Twitter">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/816333894edc3f45a0e698ed7b8dbff084d964cf958ddb0ea95a71e54a68c272"
-                  alt=""
-                  className="w-6 h-6"
-                />
-              </a>
-              <a href="#" aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/advaith_chaitanya"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Advaith Chaitanya on Instagram"
+              >
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/b51b02a431cdcc36a4970e132d36f49ece0f28840668e86cd199b0ae2344b01d"
                   alt=""
                   className="w-6 h-6"
                 />
               </a>
-              <a href="#" aria-label="LinkedIn">
+              <a
+                href="https://www.instagram.com/vamshi_krishna_84nxt"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Vamshi Krishna on Instagram"
+              >
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/61964e3988d9dff60ef5a96a28694d80050554ff2bb1c1f718725342457f1b0b"
+                  src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/b51b02a431cdcc36a4970e132d36f49ece0f28840668e86cd199b0ae2344b01d"
                   alt=""
                   className="w-6 h-6"
                 />
               </a>
-              <a href="#" aria-label="YouTube">
+              <a
+                href="https://www.instagram.com/a.karthik06"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Karthik on Instagram"
+              >
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/41697d42ae148918a512ea77a093ecc77d98ca2636a3d942e9762cae26bd1c7d"
+                  src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/b51b02a431cdcc36a4970e132d36f49ece0f28840668e86cd199b0ae2344b01d"
                   alt=""
                   className="w-6 h-6"
                 />
