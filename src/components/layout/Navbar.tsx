@@ -43,9 +43,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-4">
             <Link to="/resources">
-              <Button variant="secondary" size="sm" className="border-black text-black hover:text-white">
-                Sign In
-              </Button>
+              <Button variant="secondary" size="sm" className="border-black text-black hover:text-white">Read more</Button>
             </Link>
             <Button variant="primary" size="sm" onClick={handleJoinClick}>
               Join
