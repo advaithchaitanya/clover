@@ -1,8 +1,8 @@
 import Button from "@/components/ui/button";
 export function Footer() {
   return <footer className="flex w-full flex-col overflow-hidden items-stretch justify-center px-16 max-md:px-5 py-[50px]">
-      <div className="w-full">
-        <div className="flex w-full gap-[40px_100px] justify-between flex-wrap">
+      <div className="w-full rounded-3xl bg-[#9023f0]">
+        <div className="flex w-full gap-[40px_100px] justify-between flex-wrap mx-0 py-0 px-[47px]">
           <div className="min-w-60 text-white w-[500px]">
             <h3 className="text-lg font-semibold">Subscribe to Updates</h3>
             <p className="text-base">
@@ -11,12 +11,7 @@ export function Footer() {
           </div>
 
           <form className="min-w-60 w-[400px]" onSubmit={e => e.preventDefault()}>
-            <div className="flex w-full gap-4 text-base text-white">
-              <input type="email" placeholder="Your Email Here" className="flex-1 min-w-60 border border-white bg-transparent p-3" required />
-              <Button variant="secondary" type="submit">
-                Subscribe
-              </Button>
-            </div>
+            
             <p className="text-xs text-white mt-3">
               By subscribing you agree to our Privacy Policy.
             </p>
@@ -26,7 +21,7 @@ export function Footer() {
         <div className="flex w-full gap-10 flex-wrap mt-20">
           {/* Footer Links */}
           <div className="flex-1">
-            <img src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/54c385378e47473f2330d5b2c6939a222795e20fb94511700b52ecdd030c3c03" alt="Logo" className="w-[84px]" />
+            <img alt="Logo" src="/lovable-uploads/f3858b44-f076-4fa6-8d7f-cdbddd7defff.png" className="w-[180px] h-[200px]" />
           </div>
 
           {/* Quick Links Column */}

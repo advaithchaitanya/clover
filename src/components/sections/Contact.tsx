@@ -39,7 +39,7 @@ export function Contact() {
 
       <div className="w-full mt-20">
         <div className="flex w-full gap-8 flex-wrap">
-          {contactMethods.map((method, index) => <div key={index} className="flex min-w-60 flex-col items-stretch flex-1">
+          {contactMethods.map((method, index) => <div key={index} className="flex min-w-60 flex-col items-stretch flex-1 bg-[#aa24e8] rounded-3xl my-[50px] py-[120px]">
               <img src={method.icon} alt="" className="w-12 h-12 self-center" />
               <div className="flex w-full flex-col items-stretch mt-6">
                 <div className="flex w-full flex-col text-white">
