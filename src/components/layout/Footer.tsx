@@ -1,6 +1,6 @@
 import Button from "@/components/ui/button";
 export function Footer() {
-  return <footer className="flex w-full flex-col overflow-hidden items-stretch justify-center px-16 py-20 max-md:px-5">
+  return <footer className="flex w-full flex-col overflow-hidden items-stretch justify-center px-16 max-md:px-5 py-[50px]">
       <div className="w-full">
         <div className="flex w-full gap-[40px_100px] justify-between flex-wrap">
           <div className="min-w-60 text-white w-[500px]">

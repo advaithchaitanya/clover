@@ -9,7 +9,7 @@ export function Hero() {
       });
     }
   };
-  return <section className="min-h-[900px] w-full overflow-hidden bg-black" aria-label="Hero section">
+  return <section aria-label="Hero section" className="min-h-[500px] w-full overflow-hidden bg-black">
       <div className="flex w-full items-stretch flex-1 flex-wrap h-full">
         <div className="flex min-w-60 flex-col items-stretch justify-center flex-1 shrink basis-[0%] pl-16 pr-20 max-md:px-5">
           <div className="w-full text-white">
