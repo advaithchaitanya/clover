@@ -21,7 +21,8 @@ export default function ChatBot() {
       <Sidebar />
       <main className="ml-16 pt-16">
         <div className="container mx-auto px-4 py-[200px]">
-          <h1 className="font-bold text-white mb-8 text-3xl text-end">Chat with AI ,Click on the blue chat button to chat</h1>
+          <h1 className="font-bold mb-8 text-3xl text-end text-sky-200">Chat with AI ,Click on the blue chat button to chat
+Just say "Hey..."</h1>
           <p className="text-end font-bold text-6xl text-[#b206f0]">Your chatbot will appear here......</p>
         </div>
       </main>
