@@ -1,10 +1,16 @@
 import Button from "@/components/ui/Button";
+
 export function Newsletter() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle newsletter subscription
   };
-  return <section className="flex w-full flex-col overflow-hidden items-stretch justify-center px-16 py-28 bg-black max-md:px-5 max-md:py-[100px]" aria-label="Newsletter">
+
+  return (
+    <section
+      className="flex w-full flex-col overflow-hidden items-stretch justify-center px-16 py-28 bg-black max-md:px-5 max-md:py-[100px]"
+      aria-label="Newsletter"
+    >
       <div className="border flex w-full items-center overflow-hidden flex-wrap border-white">
         <div className="self-stretch flex min-w-60 flex-col items-stretch justify-center flex-1 p-12 max-md:px-5">
           <div className="w-full text-white">
@@ -18,7 +24,21 @@ export function Newsletter() {
           </div>
 
           <form className="w-[513px] max-w-full mt-8" onSubmit={handleSubmit}>
-            
+            <div className="flex w-full gap-4 flex-wrap">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 min-w-60 border border-white bg-transparent p-3 text-white"
+                required
+              />
+              <Button
+                variant="secondary"
+                type="submit"
+                className="bg-white text-black"
+              >
+                Sign Up
+              </Button>
+            </div>
             <p className="text-white text-xs mt-4">
               By clicking Sign Up you're confirming that you agree with our{" "}
               <a href="#" className="underline">
@@ -29,7 +49,12 @@ export function Newsletter() {
           </form>
         </div>
 
-        <img src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/6480460fd018de8b321089d0c432671054fa630cbb803fed8899eee86d504f20" alt="Newsletter illustration" className="aspect-[1.5] object-cover w-full self-stretch min-w-60 flex-1" />
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/6480460fd018de8b321089d0c432671054fa630cbb803fed8899eee86d504f20"
+          alt="Newsletter illustration"
+          className="aspect-[1.5] object-cover w-full self-stretch min-w-60 flex-1"
+        />
       </div>
-    </section>;
+    </section>
+  );
 }
