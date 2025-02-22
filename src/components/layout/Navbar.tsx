@@ -27,7 +27,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-4 text-base">
           <div className="hidden md:flex items-center gap-8 text-black">
-            <button onClick={() => scrollToSection("features")} className="hover:text-purple-600">
+            <button onClick={() => scrollToSection("features")} className="text-inherit">
               Features
             </button>
             <button onClick={() => scrollToSection("testimonials")} className="hover:text-purple-600">
