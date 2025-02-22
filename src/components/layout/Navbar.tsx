@@ -12,7 +12,7 @@ export function Navbar() {
   };
 
   const handleJoinClick = () => {
-    // This is a placeholder - you'll need to implement the actual authentication modal
+    // We'll implement this with Supabase auth
     toast({
       title: "Coming Soon",
       description: "The authentication feature will be available soon!",
@@ -20,7 +20,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[rgba(238,238,238,1)] w-full shadow-md" role="navigation">
+    <nav className="sticky top-0 z-50 bg-[rgba(238,238,238,1)] w-full shadow-md" role="navigation">
       <div className="flex w-full items-center gap-[40px_100px] justify-between flex-wrap px-16 py-4 max-md:px-5">
         <div className="bg-white flex items-center gap-6">
           <Link to="/">
@@ -40,23 +40,24 @@ export function Navbar() {
             <button onClick={() => scrollToSection("testimonials")} className="hover:text-purple-600">
               Testimonials
             </button>
-            <button onClick={() => scrollToSection("blog")} className="hover:text-purple-600">
-              Blog
-            </button>
+            <Link to="/resources" className="hover:text-purple-600">
+              Resources
+            </Link>
             <button onClick={() => scrollToSection("contact")} className="hover:text-purple-600">
               Contact
             </button>
           </div>
 
           <div className="flex items-center gap-4">
-            <Button
-              variant="secondary"
-              size="sm"
-              className="border-black text-black hover:border-purple-600"
-              onClick={() => scrollToSection("contact")}
-            >
-              Help
-            </Button>
+            <Link to="/resources">
+              <Button
+                variant="secondary"
+                size="sm"
+                className="border-black text-black hover:text-white"
+              >
+                Sign In
+              </Button>
+            </Link>
             <Button 
               variant="primary" 
               size="sm"

@@ -1,4 +1,6 @@
-import Button from "@/components/ui/Button";
+
+import Button from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export function Blog() {
   const blogPosts = [
@@ -72,21 +74,25 @@ export function Blog() {
                 </div>
               </div>
 
-              <Button variant="link" className="mt-6">
-                Read more
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/6d5c9a41313554c0ff9350f44957dd54ef90fc95cb5fcd299c0c6686a11b3bd0"
-                  alt=""
-                  className="w-6 h-6 ml-2"
-                />
-              </Button>
+              <Link to="/resources">
+                <Button variant="link" className="mt-6">
+                  Read more
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/6d5c9a41313554c0ff9350f44957dd54ef90fc95cb5fcd299c0c6686a11b3bd0"
+                    alt=""
+                    className="w-6 h-6 ml-2"
+                  />
+                </Button>
+              </Link>
             </article>
           ))}
         </div>
       </div>
 
       <div className="mt-16">
-        <Button variant="secondary">View all</Button>
+        <Link to="/resources">
+          <Button variant="secondary">View all</Button>
+        </Link>
       </div>
     </section>
   );

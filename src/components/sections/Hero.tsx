@@ -1,6 +1,15 @@
-import Button from "@/components/ui/Button";
+
+import Button from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export function Hero() {
+  const scrollToFeatures = () => {
+    const element = document.getElementById("features");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       className="min-h-[900px] w-full overflow-hidden bg-black"
@@ -20,8 +29,10 @@ export function Hero() {
           </div>
 
           <div className="flex gap-4 mt-8">
-            <Button variant="secondary">Start</Button>
-            <Button variant="secondary">Learn More</Button>
+            <Link to="/chat">
+              <Button variant="secondary">Start</Button>
+            </Link>
+            <Button variant="secondary" onClick={scrollToFeatures}>Learn More</Button>
           </div>
         </div>
 
