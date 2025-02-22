@@ -10,7 +10,7 @@ export function Hero() {
     }
   };
   return <section aria-label="Hero section" className="min-h-[500px] w-full overflow-hidden bg-black">
-      <div className="flex w-full items-stretch flex-1 flex-wrap h-full">
+      <div className="flex  items-stretch flex-1 flex-wrap h-full m-auto">
         <div className="flex min-w-60 flex-col items-stretch justify-center flex-1 shrink basis-[0%] pl-16 pr-20 max-md:px-5">
           <div className="w-full text-white">
             <h1 className="font-bold leading-[67px] max-md:leading-[54px] text-4xl">Click on the chat ion to chat with "AI bot"</h1>
