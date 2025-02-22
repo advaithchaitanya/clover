@@ -9,7 +9,7 @@ export function Sidebar() {
 
   const links = [
     { icon: Home, label: "Home", to: "/" },
-    { icon: MessageCircle, label: "Chat", to: "/chat" },
+    { icon: MessageCircle, label: "Click here to chat with AI", to: "/chat" },
     { icon: BookOpen, label: "Resources", to: "/resources" },
   ];
 
