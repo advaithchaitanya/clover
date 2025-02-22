@@ -21,7 +21,7 @@ export function Footer() {
         <div className="flex w-full gap-10 flex-wrap mt-20">
           {/* Footer Links */}
           <div className="flex-1">
-            <img alt="Logo" src="/lovable-uploads/f3858b44-f076-4fa6-8d7f-cdbddd7defff.png" className="w-[180px] h-[200px]" />
+            <img alt="Logo" src="/lovable-uploads/f3858b44-f076-4fa6-8d7f-cdbddd7defff.png" className="w-[180px] h-[130px]" />
           </div>
 
           {/* Quick Links Column */}

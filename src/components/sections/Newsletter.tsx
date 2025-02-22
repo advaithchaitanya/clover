@@ -11,10 +11,7 @@ export function Newsletter() {
             <h2 className="text-5xl font-bold leading-[58px] max-md:text-[40px] max-md:leading-[54px]">
               Join Our Chatbot Therapy Today
             </h2>
-            <p className="text-lg font-normal leading-[27px] mt-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique.
-            </p>
+            <p className="text-lg font-normal leading-[27px] mt-6">We also do campaigns, join us at our social media</p>
           </div>
 
           <form className="w-[513px] max-w-full mt-8" onSubmit={handleSubmit}>

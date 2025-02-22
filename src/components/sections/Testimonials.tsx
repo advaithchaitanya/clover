@@ -12,7 +12,7 @@ export function Testimonials() {
 
         <div className="flex items-center gap-5 text-base text-white font-semibold mt-8">
           <img src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/8fcdbe6aadd80965d2c11db4b626a7933d665a56beea3d4ceb52599bebda2a1a" alt="Emily Johnson" className="w-14 h-14 rounded-full" />
-          <cite className="not-italic">Emily Johnson</cite>
+          <cite className="not-italic">Emma stone</cite>
           <div className="border-l border-black h-[61px]" />
           <img src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/695f8113a57776e342a799177418e83beae93c0c6c35e062893341979dad9921" alt="Company logo" className="w-[120px]" />
         </div>
