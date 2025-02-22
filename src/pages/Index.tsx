@@ -1,3 +1,4 @@
+
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
@@ -7,8 +8,10 @@ import { Blog } from "@/components/sections/Blog";
 import { Contact } from "@/components/sections/Contact";
 import { Newsletter } from "@/components/sections/Newsletter";
 import { Sidebar } from "@/components/layout/Sidebar/Sidebar";
+
 const Index = () => {
-  return <div className="min-h-screen bg-black mx-0">
+  return (
+    <div className="min-h-screen bg-black">
       <Navbar />
       <Sidebar />
       <main className="ml-16">
@@ -32,6 +35,8 @@ const Index = () => {
         </section>
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
