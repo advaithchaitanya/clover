@@ -1,0 +1,36 @@
+import Button from "@/components/ui/Button";
+
+export function Hero() {
+  return (
+    <section
+      className="min-h-[900px] w-full overflow-hidden bg-black"
+      aria-label="Hero section"
+    >
+      <div className="flex w-full items-stretch flex-1 flex-wrap h-full">
+        <div className="flex min-w-60 flex-col items-stretch justify-center flex-1 shrink basis-[0%] pl-16 pr-20 max-md:px-5">
+          <div className="w-full text-white">
+            <h1 className="text-[56px] font-bold leading-[67px] max-md:text-[40px] max-md:leading-[54px]">
+              Transform Your Mind with Our AI Therapist
+            </h1>
+            <p className="text-lg font-normal leading-[27px] mt-6">
+              Experience a new way to express your feelings and find comfort.
+              Our chatbot therapist is here to listen and guide you through your
+              challenges.
+            </p>
+          </div>
+
+          <div className="flex gap-4 mt-8">
+            <Button variant="secondary">Start</Button>
+            <Button variant="secondary">Learn More</Button>
+          </div>
+        </div>
+
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/5dce293e5f57c7a5ab9bf24a40687d4179b22b89752f63c928cd126dc8b37e07"
+          alt="AI Therapy Illustration"
+          className="aspect-[0.8] object-contain w-full min-w-60 flex-1 shrink basis-36 rounded-[59px_59px_65px_59px]"
+        />
+      </div>
+    </section>
+  );
+}
