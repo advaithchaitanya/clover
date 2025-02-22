@@ -2,6 +2,8 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Sidebar } from "@/components/layout/Sidebar/Sidebar";
 import { Card } from "@/components/ui/card";
+import Button from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const books = [
   {
@@ -46,14 +48,22 @@ export default function Resources() {
     <div className="min-h-screen bg-black">
       <Navbar />
       <Sidebar />
-      <main className="ml-16 pt-16">
+      <main className="ml-16 pt-20">
         <div className="container mx-auto px-4 py-8">
+          <div className="mb-8">
+            <Link to="/">
+              <Button variant="secondary" className="mb-8">
+                ← Back to Home
+              </Button>
+            </Link>
+          </div>
+          
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">
               Motivational Videos
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="aspect-video">
+              <div className="aspect-video rounded-lg overflow-hidden">
                 <iframe
                   width="100%"
                   height="100%"
@@ -63,7 +73,7 @@ export default function Resources() {
                   allowFullScreen
                 ></iframe>
               </div>
-              <div className="aspect-video">
+              <div className="aspect-video rounded-lg overflow-hidden">
                 <iframe
                   width="100%"
                   height="100%"
@@ -73,7 +83,7 @@ export default function Resources() {
                   allowFullScreen
                 ></iframe>
               </div>
-              <div className="aspect-video">
+              <div className="aspect-video rounded-lg overflow-hidden">
                 <iframe
                   width="100%"
                   height="100%"
@@ -94,7 +104,7 @@ export default function Resources() {
               {books.map((book) => (
                 <Card
                   key={book.title}
-                  className="hover:border-purple-500 transition-colors"
+                  className="hover:border-purple-500 transition-colors backdrop-blur-sm"
                 >
                   <h3 className="text-xl font-bold text-white mb-2">
                     {book.title}
