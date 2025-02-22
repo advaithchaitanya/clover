@@ -20,7 +20,7 @@ export function Sidebar() {
     label: "Resources",
     to: "/resources"
   }];
-  return <aside onMouseEnter={() => setIsExpanded(true)} onMouseLeave={() => setIsExpanded(false)} className="bg-orange-500">
+  return <aside className={cn("fixed left-0 top-0 z-40 h-screen bg-black transition-all duration-300 ease-in-out", isExpanded ? "w-64" : "w-16")} onMouseEnter={() => setIsExpanded(true)} onMouseLeave={() => setIsExpanded(false)}>
       <div className="flex h-16 items-center justify-center border-b border-white">
         <Menu className="h-6 w-6 text-white" />
       </div>
