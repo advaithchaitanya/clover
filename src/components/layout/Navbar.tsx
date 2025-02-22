@@ -21,7 +21,7 @@ export function Navbar() {
       <div className="flex w-full items-center gap-[40px_100px] justify-between flex-wrap px-16 py-4 max-md:px-5">
         <div className="bg-white flex items-center gap-6">
           <Link to="/">
-            <img alt="Logo" src="/lovable-uploads/17c4675c-f737-42b4-82ed-3e43f4be642f.png" className="w-[118px] h-50" />
+            <img alt="Logo" className="w-[118px] h-auto" src="/lovable-uploads/17c4675c-f737-42b4-82ed-3e43f4be642f.png" />
           </Link>
         </div>
 

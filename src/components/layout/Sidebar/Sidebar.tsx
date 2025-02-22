@@ -25,7 +25,7 @@ export function Sidebar() {
         <Menu className="h-6 w-6 text-white" />
       </div>
 
-      <nav className="mt-8 my-0">
+      <nav className="mt-8">
         {links.map(link => <Link key={link.to} to={link.to} className="flex items-center px-4 py-3 text-white hover:bg-purple-600 transition-colors my-[90px]">
             <link.icon className="h-6 w-6" />
             {isExpanded && <span className="ml-4 text-sm font-medium">{link.label}</span>}
