@@ -13,7 +13,7 @@ export function Hero() {
       <div className="flex  items-stretch flex-1 flex-wrap h-full m-auto">
         <div className="flex min-w-60 flex-col items-stretch justify-center flex-1 shrink basis-[0%] pl-16 pr-20 max-md:px-5">
           <div className="w-full text-white">
-            <h1 className="font-bold leading-[67px] max-md:leading-[54px] text-4xl">Click on the chat ion to chat with "AI bot"</h1>
+            <h1 className="font-bold leading-[67px] max-md:leading-[54px] text-4xl">Click on the chat icon to chat with "AI bot"</h1>
             <p className="text-lg font-normal leading-[27px] mt-6">
               Experience a new way to express your feelings and find comfort.
               Our chatbot therapist is here to listen and guide you through your
