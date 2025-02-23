@@ -1,21 +1,63 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "@/components/ui/button";
 import { Sidebar } from "@/components/layout/Sidebar/Sidebar";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
+import { signUp, signIn, signOut } from "@/lib/supabase";
+import { supabase } from "@/integrations/supabase/client";
 
 export default function UserPage() {
-  const [isLoggedIn] = useState(false); // This will be connected to auth state later
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [session, setSession] = useState<any>(null);
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     password: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    // Check current session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setIsLoggedIn(!!session);
+    });
+
+    // Listen for auth changes
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+      setIsLoggedIn(!!session);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+    setIsLoading(true);
+
+    try {
+      if (showLogin) {
+        await signIn({ email: formData.email, password: formData.password });
+      } else {
+        await signUp({ email: formData.email, password: formData.password });
+      }
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleLogout = async () => {
+    setIsLoading(true);
+    try {
+      await signOut();
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -27,7 +69,7 @@ export default function UserPage() {
           {isLoggedIn ? (
             <div className="max-w-2xl mx-auto mt-20 text-black">
               <h1 className="text-3xl font-bold mb-6">
-                Welcome, you are logged in!
+                Welcome, {session?.user?.email}!
               </h1>
               <p className="text-lg mb-8">
                 Please explore our resources or chat with our chat bot.
@@ -39,25 +81,32 @@ export default function UserPage() {
                 <Button variant="secondary" onClick={() => window.location.href = "/chat"}>
                   Chat with AI
                 </Button>
+                <Button variant="secondary" onClick={handleLogout} disabled={isLoading}>
+                  {isLoading ? "Logging out..." : "Logout"}
+                </Button>
               </div>
             </div>
           ) : (
             <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
-              <h1 className="text-2xl font-bold mb-6 text-black">Sign Up</h1>
+              <h1 className="text-2xl font-bold mb-6 text-black">
+                {showLogin ? "Login" : "Sign Up"}
+              </h1>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="username" className="block text-sm font-medium text-black mb-2">
-                    Username
-                  </label>
-                  <input
-                    type="text"
-                    id="username"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md text-black"
-                    value={formData.username}
-                    onChange={(e) => setFormData({ ...formData, username: e.target.value })}
-                    required
-                  />
-                </div>
+                {!showLogin && (
+                  <div>
+                    <label htmlFor="username" className="block text-sm font-medium text-black mb-2">
+                      Username
+                    </label>
+                    <input
+                      type="text"
+                      id="username"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md text-black"
+                      value={formData.username}
+                      onChange={(e) => setFormData({ ...formData, username: e.target.value })}
+                      required
+                    />
+                  </div>
+                )}
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
                     Email
@@ -84,9 +133,18 @@ export default function UserPage() {
                     required
                   />
                 </div>
-                <Button type="submit" variant="primary" className="w-full">
-                  Sign Up
+                <Button type="submit" variant="primary" className="w-full" disabled={isLoading}>
+                  {isLoading ? "Processing..." : (showLogin ? "Login" : "Sign Up")}
                 </Button>
+                <div className="text-center mt-4">
+                  <button
+                    type="button"
+                    onClick={() => setShowLogin(!showLogin)}
+                    className="text-purple-600 hover:text-purple-800"
+                  >
+                    {showLogin ? "Need an account? Sign up" : "Already have an account? Login"}
+                  </button>
+                </div>
               </form>
             </div>
           )}
