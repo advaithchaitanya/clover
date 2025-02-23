@@ -1,23 +1,94 @@
 import Button from "@/components/ui/button";
+import { useState } from "react";
+
 export function Footer() {
+  const [feedback, setFeedback] = useState({
+    rating: "",
+    feedback: "",
+    ratingScale: "",
+    complaint: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Feedback submitted:", feedback);
+  };
+
   return <footer className="flex w-full flex-col overflow-hidden items-stretch justify-center px-16 max-md:px-5 py-[50px]">
       <div className="w-full rounded-3xl bg-[#9023f0]">
-        <div className="flex w-full gap-[40px_100px] justify-between flex-wrap mx-0 py-0 px-[47px]">
-          <div className="min-w-60 text-white w-[500px]">
-            <h3 className="text-lg font-semibold">Subscribe to Updates</h3>
-            <p className="text-base">
-              Stay informed about our latest news and offers.
-            </p>
-          </div>
-
-          <form className="min-w-60 w-[400px]" onSubmit={e => e.preventDefault()}>
+        <div className="flex w-full gap-[40px_100px] justify-between flex-wrap mx-0 py-8 px-[47px]">
+          {/* Feedback Form */}
+          <form onSubmit={handleSubmit} className="w-full max-w-2xl mx-auto text-white">
+            <h3 className="text-2xl font-semibold mb-6">Website Feedback</h3>
             
-            <p className="text-xs text-white mt-3">
-              By subscribing you agree to our Privacy Policy.
-            </p>
+            <div className="space-y-6">
+              <div>
+                <label htmlFor="rating" className="block text-sm font-medium mb-2">
+                  Rate this website
+                </label>
+                <select
+                  id="rating"
+                  className="w-full px-3 py-2 rounded-md text-black"
+                  value={feedback.rating}
+                  onChange={(e) => setFeedback({ ...feedback, rating: e.target.value })}
+                >
+                  <option value="">Select rating</option>
+                  <option value="excellent">Excellent</option>
+                  <option value="good">Good</option>
+                  <option value="fair">Fair</option>
+                  <option value="poor">Poor</option>
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="feedback" className="block text-sm font-medium mb-2">
+                  Give feedback
+                </label>
+                <textarea
+                  id="feedback"
+                  rows={4}
+                  className="w-full px-3 py-2 rounded-md text-black"
+                  value={feedback.feedback}
+                  onChange={(e) => setFeedback({ ...feedback, feedback: e.target.value })}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="ratingScale" className="block text-sm font-medium mb-2">
+                  Rating (1-10)
+                </label>
+                <input
+                  type="number"
+                  id="ratingScale"
+                  min="1"
+                  max="10"
+                  className="w-full px-3 py-2 rounded-md text-black"
+                  value={feedback.ratingScale}
+                  onChange={(e) => setFeedback({ ...feedback, ratingScale: e.target.value })}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="complaint" className="block text-sm font-medium mb-2">
+                  Complaints and Requests
+                </label>
+                <textarea
+                  id="complaint"
+                  rows={4}
+                  className="w-full px-3 py-2 rounded-md text-black"
+                  value={feedback.complaint}
+                  onChange={(e) => setFeedback({ ...feedback, complaint: e.target.value })}
+                />
+              </div>
+
+              <Button type="submit" variant="secondary">
+                Submit Feedback
+              </Button>
+            </div>
           </form>
         </div>
 
+        {/* Rest of the footer content */}
         <div className="flex w-full gap-10 flex-wrap mt-20">
           {/* Footer Links */}
           <div className="flex-1">

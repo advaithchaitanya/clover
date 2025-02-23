@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { ButtonHTMLAttributes, forwardRef } from "react";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "link" | "ghost" | "icon";
+  variant?: "primary" | "secondary" | "link" | "ghost" | "icon" | "outline";
   size?: "sm" | "md" | "lg" | "icon" | "default";
 }
 
@@ -14,6 +14,7 @@ const buttonStyles = {
     link: "text-white hover:text-purple-400 hover:scale-110 transition-all duration-300",
     ghost: "hover:bg-accent hover:text-accent-foreground",
     icon: "h-10 w-10 p-0",
+    outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
   },
   sizes: {
     sm: "px-5 py-2 text-base",

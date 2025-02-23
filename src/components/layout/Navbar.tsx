@@ -1,9 +1,11 @@
 
 import Button from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
 
 export function Navbar() {
+  const navigate = useNavigate();
+  
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -14,11 +16,7 @@ export function Navbar() {
   };
   
   const handleJoinClick = () => {
-    // We'll implement this with Supabase auth
-    toast({
-      title: "Coming Soon",
-      description: "The authentication feature will be available soon!"
-    });
+    navigate("/user");
   };
 
   return <nav className="sticky top-0 z-50 bg-[rgba(238,238,238,1)] w-full shadow-md" role="navigation">
