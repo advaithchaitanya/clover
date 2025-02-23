@@ -29,7 +29,7 @@ export function Hero() {
           </div>
         </div>
 
-        <img src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/5dce293e5f57c7a5ab9bf24a40687d4179b22b89752f63c928cd126dc8b37e07" alt="AI Therapy Illustration" className="aspect-[0.8] object-contain w-full min-w-60 flex-1 shrink basis-36 rounded-[59px_59px_65px_59px]  max-height-500" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/547abc55e6e448d595cf41dc48be6c0f/5dce293e5f57c7a5ab9bf24a40687d4179b22b89752f63c928cd126dc8b37e07" alt="AI Therapy Illustration" className="aspect-[0.8] w-full min-w-60 flex-1 shrink basis-36 rounded-[59px_59px_65px_59px] max-h-[500px] object-scale-down" />
       </div>
     </section>;
 }
