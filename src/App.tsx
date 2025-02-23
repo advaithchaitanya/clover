@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import ChatBot from "./pages/ChatBot";
 import Resources from "./pages/Resources";
 import NotFound from "./pages/NotFound";
+import UserPage from "./pages/UserPage";
 import { SidebarProvider } from "./components/layout/Sidebar/SidebarContext";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/chat" element={<ChatBot />} />
             <Route path="/resources" element={<Resources />} />
+            <Route path="/user" element={<UserPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

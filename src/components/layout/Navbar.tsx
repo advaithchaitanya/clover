@@ -1,6 +1,8 @@
+
 import Button from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
+
 export function Navbar() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -10,6 +12,7 @@ export function Navbar() {
       });
     }
   };
+  
   const handleJoinClick = () => {
     // We'll implement this with Supabase auth
     toast({
@@ -17,11 +20,12 @@ export function Navbar() {
       description: "The authentication feature will be available soon!"
     });
   };
+
   return <nav className="sticky top-0 z-50 bg-[rgba(238,238,238,1)] w-full shadow-md" role="navigation">
       <div className="flex w-full items-center gap-[40px_100px] justify-between flex-wrap px-16 py-4 max-md:px-5 bg-[#a314ff]">
         <div className="bg-white flex items-center gap-6">
           <Link to="/">
-            <img alt="Logo" src="/lovable-uploads/17c4675c-f737-42b4-82ed-3e43f4be642f.png" className="w-[50px] h-50" />
+            <img alt="Logo" src="/lovable-uploads/17c4675c-f737-42b4-82ed-3e43f4be642f.png" className="w-[40px] h-auto" />
           </Link>
         </div>
 
