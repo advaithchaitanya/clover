@@ -14,7 +14,7 @@ const Index = () => {
     <div className="min-h-screen bg-black">
       <Navbar />
       <Sidebar />
-      <main className="ml-16">
+      <main className="ml-16 px-4 md:px-8 lg:px-16">
         <section id="hero">
           <Hero />
         </section>

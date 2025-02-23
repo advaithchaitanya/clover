@@ -17,7 +17,7 @@ export function Sidebar() {
   return (
     <aside
       className={cn(
-        "fixed left-0 top-0 z-40 h-screen bg-black transition-all duration-300 ease-in-out flex flex-col",
+        "fixed left-0 top-0 z-40 h-screen bg-orange-500 transition-all duration-300 ease-in-out flex flex-col",
         isExpanded ? "w-64" : "w-16"
       )}
       onMouseEnter={() => setIsExpanded(true)}
@@ -33,7 +33,7 @@ export function Sidebar() {
             <Link
               key={link.to}
               to={link.to}
-              className="flex items-center px-4 py-3 text-white hover:bg-purple-600 transition-colors"
+              className="flex items-center px-4 py-3 text-white hover:bg-purple-600 hover:text-white transition-colors"
             >
               <link.icon className="h-6 w-6" />
               {isExpanded && (
