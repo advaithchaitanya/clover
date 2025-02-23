@@ -18,7 +18,7 @@ export default function UserPage() {
           <h1 className="text-3xl font-bold mb-6">
             Welcome, you are logged in!
           </h1>
-          <p className="text-lg mb-8 bg-green-950 hover:bg-green-800">
+          <p className="text-lg mb-8 bg-fuchsia-700 hover:bg-fuchsia-600">
             Please explore our resources or chat with our chat bot.
           </p>
           <div className="flex gap-4">
@@ -34,7 +34,7 @@ export default function UserPage() {
   }
   return <div className="min-h-screen bg-gradient-to-r from-orange-100 to-white p-8">
       <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8 mt-20">
-        <h1 className="text-2xl font-bold mb-6 text-black bg-lime-300 hover:bg-lime-200">Sign Up</h1>
+        <h1 className="text-2xl font-bold mb-6 text-black bg-orange-600 hover:bg-orange-500">Sign Up</h1>
         <form onSubmit={handleSubmit} className="space-y-6 text-neutral-50">
           <div>
             <label htmlFor="username" className="block text-sm font-medium text-black mb-2">
