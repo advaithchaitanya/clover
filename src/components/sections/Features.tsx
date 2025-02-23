@@ -1,5 +1,7 @@
-import { Card } from "@/components/ui/Card";
-import Button from "@/components/ui/Button";
+
+import { Card } from "@/components/ui/card";
+import Button from "@/components/ui/button";
+
 export function Features() {
   return <section aria-label="Features" className="flex min-h-[963px] w-full flex-col overflow-hidden text-white px-16 bg-black max-md:px-5 py-[10px]">
       <div className="flex w-[768px] max-w-full flex-col">
@@ -56,8 +58,6 @@ export function Features() {
       </div>
 
       <div className="flex items-center gap-6 mt-20">
-        
-        
       </div>
     </section>;
 }
